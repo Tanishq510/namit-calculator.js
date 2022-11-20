@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@300&display=swap');
+html, body 
+{
+
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif; 
+  margin: 0;
+}
+
+.button{
+  width: 70px;
+  height: 66px;
+  padding: 20px;
+  margin: 0 3px;
+  font-family: poppins;
+  border: 2px solid ;
+  border-radius: 15px;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: 1.5s;
+}
+
+.button.button-clear{
+  width: 146px;
+}
+
+.button:hover{
+    box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee,
+    0 5px 50px 0 #15f4ee inset,  0 5px 50px 0 #15f4ee;
+}
+
+.row{
+  margin: 8px 0;
+}
+.row input{
+  width: 302px;
+  height: 83px;
+  font-size: 20px;
+    margin: 0;
+    padding: 10px 0px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.container{
+  margin: auto;
+  padding: 54px 0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-center{
+  text-align: center;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+.calc{
+    font-style: italic;
+    color: #020c02;
+}
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: auto;
+    }
+}
