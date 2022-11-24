@@ -1,9 +1,12 @@
 
 let string = "";
 let buttons = document.querySelectorAll('.button');
-Array.from(buttons).forEach((button)=>{
-  button.addEventListener('click', (e)=> {
+Array.from(buttons).forEach((button)=>
+{
+  button.addEventListener('click', (e)=> 
+  {
     if(e.target.innerHTML == '='){
+      console.log(string)
       string = eval(string);
       document.querySelector('input').value = string;
     }
@@ -16,10 +19,18 @@ Array.from(buttons).forEach((button)=>{
       string = inputValue.slice(0, -1);
       document.querySelector('input').value = string;
     }
+    else if(e.target.innerHTML == '√'){
+
+     let freshinput = document.querySelector('input').value;
+     string = Math.sqrt(freshinput);
+     document.querySelector('input').value = string;
+
+    }
     else{ 
     console.log(e.target)
     string = string + e.target.innerHTML;
     document.querySelector('input').value = string;
     }  
   })
+   
 })
